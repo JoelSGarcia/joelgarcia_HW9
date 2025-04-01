@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Survey - Part 1</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tech Survey - Part 1</h1>
+    </header>
+    <main>
+        <p>Please provide some basic information about yourself.</p>
+        <form>
+            <!-- Name (Input Box) -->
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" autofocus required>
+            </p>
+            <!-- Gender (Radio Buttons) with Tooltip -->
+            <p>
+                <label>What is your gender?</label>
+                <span class="tooltip">
+                    <i class="fa-solid fa-circle-info fontawesome"
+                        aria-label="More information about gender question"></i>
+                    <span class="tooltip tooltiptext">
+                        Letting us know how you identify yourself helps us measure and enhance diversity and inclusivity
+                        in tech by addressing historical gender imbalances.
+                    </span>
+                </span><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </p>
+            <button onclick="window.location.href='form2.html';">
+                Next
+            </button>
+        </form>
+    </main>
+</body>
+
+</html>
