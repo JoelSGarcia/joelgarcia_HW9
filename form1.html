@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Survey - Part 1</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/db37cc9ee6.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
+    <header class="bg-primary text-white text-center py-4">
         <h1>Tech Survey - Part 1</h1>
     </header>
-    <main>
+    <main class="container my-5">
         <p>Please provide some basic information about yourself.</p>
         <form>
             <!-- Name (Input Box) -->
-            <p>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" autofocus required>
-            </p>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" autofocus required>
+            </div>
             <!-- Gender (Radio Buttons) with Tooltip -->
-            <p>
-                <label>What is your gender?</label>
+            <div class="mb-3">
+                <label class="form-label">What is your gender?</label>
                 <span class="tooltip">
                     <i class="fa-solid fa-circle-info fontawesome"
                         aria-label="More information about gender question"></i>
@@ -29,15 +35,23 @@
                         Letting us know how you identify yourself helps us measure and enhance diversity and inclusivity
                         in tech by addressing historical gender imbalances.
                     </span>
-                </span><br>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label><br>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </p>
-            <button onclick="window.location.href='form2.html';">
+                </span>
+                <div>
+                    <div class="form-check">
+                        <input type="radio" id="male" name="gender" value="male" class="form-check-input">
+                        <label for="male" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="female" name="gender" value="female" class="form-check-input">
+                        <label for="female" class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="other" name="gender" value="other" class="form-check-input">
+                        <label for="other" class="form-check-label">Other</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="window.location.href='form2.html';" class="btn btn-primary">
                 Next
             </button>
         </form>
